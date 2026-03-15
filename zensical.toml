@@ -8,9 +8,9 @@
 
 [project]
 site_name = "Continuous Intelligence"
-site_url = "https://denisecase.github.io/cintel-02-static-anomalies/"
-repo_url = "https://github.com/denisecase/cintel-02-static-anomalies"
-repo_name = "denisecase/cintel-02-static-anomalies"
+site_url = "https://ajaneh.github.io/cintel-02-static-anomalies/"
+repo_url = "https://github.com/ajaneh/cintel-02-static-anomalies"
+repo_name = "ajaneh/cintel-02-static-anomalies"
 site_description = "Continuous Intelligence project documentation"
 docs_dir = "docs" # source directory for documentation markdown files
 site_dir = "site" # output directory for generated site (ignored by Git; not in repo)
@@ -19,7 +19,7 @@ edit_uri = "edit/main/docs/" # "Edit this page" links (GitHub)
 [project.extra]
 # WHY: Social links provide easy access to project repositories and profiles.
 social = [
-    {icon = "fontawesome/brands/github", link = "https://github.com/denisecase/cintel-02-static-anomalies" },
+    {icon = "fontawesome/brands/github", link = "https://github.com/ajaneh/cintel-02-static-anomalies" },
 ]
 
 # ------------------------------------------------------------

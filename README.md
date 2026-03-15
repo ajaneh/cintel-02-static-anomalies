@@ -97,7 +97,7 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/cintel-02-static-anomalies
+git clone https://github.com/ajaneh/cintel-02-static-anomalies
 
 cd cintel-02-static-anomalies
 code .
