@@ -1,0 +1,25 @@
+2026-03-15 13:00:31 | INFO | P2 | === RUN START ===
+2026-03-15 13:00:31 | INFO | P2 | project=CINTEL
+2026-03-15 13:00:31 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-15 13:00:31 | INFO | P2 | python=3.14.0
+2026-03-15 13:00:31 | INFO | P2 | os=Windows 11
+2026-03-15 13:00:31 | INFO | P2 | shell=powershell
+2026-03-15 13:00:31 | INFO | P2 | cwd=.
+2026-03-15 13:00:31 | INFO | P2 | github_actions=False
+2026-03-15 13:00:31 | INFO | P2 | ========================
+2026-03-15 13:00:31 | INFO | P2 | START main()
+2026-03-15 13:00:31 | INFO | P2 | ========================
+2026-03-15 13:00:31 | INFO | P2 | ROOT_DIR = .
+2026-03-15 13:00:31 | INFO | P2 | DATA_FILE = data\clinic_data_case.csv
+2026-03-15 13:00:31 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_case.csv
+2026-03-15 13:00:31 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-15 13:00:31 | INFO | P2 | Loaded 22 patient records
+2026-03-15 13:00:31 | INFO | P2 | Studying children's ages and heights to find anomalies...
+2026-03-15 13:00:31 | INFO | P2 | MAX_REASONABLE_X_VALUE: 16.0 in years
+2026-03-15 13:00:31 | INFO | P2 | MAX_REASONABLE_Y_VALUE: 72.0 in inches
+2026-03-15 13:00:31 | INFO | P2 | Count of anomalies found: 3
+2026-03-15 13:00:31 | INFO | P2 | Wrote anomalies file: C:\Repos\cintel-02-static-anomalies\artifacts\anomalies_case.csv
+2026-03-15 13:00:31 | INFO | P2 | ========================
+2026-03-15 13:00:31 | INFO | P2 | Pipeline executed successfully!
+2026-03-15 13:00:31 | INFO | P2 | ========================
+2026-03-15 13:00:31 | INFO | P2 | END main()
