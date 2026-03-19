@@ -115,6 +115,7 @@ git add -A
 uvx pre-commit run --all-files
 
 uv run python -m cintel.anomaly_detector_case
+uv run python -m cintel.anomaly_detector_alex
 
 uv run ruff format .
 uv run ruff check . --fix

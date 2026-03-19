@@ -564,3 +564,1684 @@ shape: (24, 2)
 2026-03-17 11:32:17 | INFO | P2 | Pipeline executed successfully!
 2026-03-17 11:32:17 | INFO | P2 | ========================
 2026-03-17 11:32:17 | INFO | P2 | END main()
+2026-03-17 11:38:16 | INFO | P2 | === RUN START ===
+2026-03-17 11:38:16 | INFO | P2 | project=CINTEL
+2026-03-17 11:38:16 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:38:16 | INFO | P2 | python=3.14.0
+2026-03-17 11:38:16 | INFO | P2 | os=Windows 11
+2026-03-17 11:38:16 | INFO | P2 | shell=powershell
+2026-03-17 11:38:16 | INFO | P2 | cwd=.
+2026-03-17 11:38:16 | INFO | P2 | github_actions=False
+2026-03-17 11:38:16 | INFO | P2 | ========================
+2026-03-17 11:38:16 | INFO | P2 | START main()
+2026-03-17 11:38:16 | INFO | P2 | ========================
+2026-03-17 11:38:16 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:38:16 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:38:16 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:38:16 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:38:16 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:38:16 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:38:16 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:38:16 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:38:16 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:38:16 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:38:16 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:38:35 | INFO | P2 | === RUN START ===
+2026-03-17 11:38:35 | INFO | P2 | project=CINTEL
+2026-03-17 11:38:35 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:38:35 | INFO | P2 | python=3.14.0
+2026-03-17 11:38:35 | INFO | P2 | os=Windows 11
+2026-03-17 11:38:35 | INFO | P2 | shell=powershell
+2026-03-17 11:38:35 | INFO | P2 | cwd=.
+2026-03-17 11:38:35 | INFO | P2 | github_actions=False
+2026-03-17 11:38:35 | INFO | P2 | ========================
+2026-03-17 11:38:35 | INFO | P2 | START main()
+2026-03-17 11:38:35 | INFO | P2 | ========================
+2026-03-17 11:38:35 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:38:35 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:38:35 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:38:35 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:38:35 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:38:35 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:38:35 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:38:35 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:38:35 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:38:35 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:38:35 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:41:12 | INFO | P2 | === RUN START ===
+2026-03-17 11:41:12 | INFO | P2 | project=CINTEL
+2026-03-17 11:41:12 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:41:12 | INFO | P2 | python=3.14.0
+2026-03-17 11:41:12 | INFO | P2 | os=Windows 11
+2026-03-17 11:41:12 | INFO | P2 | shell=powershell
+2026-03-17 11:41:12 | INFO | P2 | cwd=.
+2026-03-17 11:41:12 | INFO | P2 | github_actions=False
+2026-03-17 11:41:12 | INFO | P2 | ========================
+2026-03-17 11:41:12 | INFO | P2 | START main()
+2026-03-17 11:41:12 | INFO | P2 | ========================
+2026-03-17 11:41:12 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:41:12 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:41:12 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:41:12 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:41:12 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:41:12 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:41:12 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:41:12 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:41:12 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:41:12 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:41:12 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:42:34 | INFO | P2 | === RUN START ===
+2026-03-17 11:42:34 | INFO | P2 | project=CINTEL
+2026-03-17 11:42:34 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:42:34 | INFO | P2 | python=3.14.0
+2026-03-17 11:42:34 | INFO | P2 | os=Windows 11
+2026-03-17 11:42:34 | INFO | P2 | shell=powershell
+2026-03-17 11:42:34 | INFO | P2 | cwd=.
+2026-03-17 11:42:34 | INFO | P2 | github_actions=False
+2026-03-17 11:42:34 | INFO | P2 | ========================
+2026-03-17 11:42:34 | INFO | P2 | START main()
+2026-03-17 11:42:34 | INFO | P2 | ========================
+2026-03-17 11:42:34 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:42:34 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:42:34 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:42:34 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:42:34 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:42:34 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:42:34 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:42:34 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:42:34 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:42:34 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:42:34 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:44:10 | INFO | P2 | === RUN START ===
+2026-03-17 11:44:10 | INFO | P2 | project=CINTEL
+2026-03-17 11:44:10 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:44:10 | INFO | P2 | python=3.14.0
+2026-03-17 11:44:10 | INFO | P2 | os=Windows 11
+2026-03-17 11:44:10 | INFO | P2 | shell=powershell
+2026-03-17 11:44:10 | INFO | P2 | cwd=.
+2026-03-17 11:44:10 | INFO | P2 | github_actions=False
+2026-03-17 11:44:10 | INFO | P2 | ========================
+2026-03-17 11:44:10 | INFO | P2 | START main()
+2026-03-17 11:44:10 | INFO | P2 | ========================
+2026-03-17 11:44:10 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:44:10 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:44:10 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:44:10 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:44:10 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:44:10 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:44:10 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:44:10 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:44:10 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:44:10 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:44:10 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:45:23 | INFO | P2 | === RUN START ===
+2026-03-17 11:45:23 | INFO | P2 | project=CINTEL
+2026-03-17 11:45:23 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:45:23 | INFO | P2 | python=3.14.0
+2026-03-17 11:45:23 | INFO | P2 | os=Windows 11
+2026-03-17 11:45:23 | INFO | P2 | shell=powershell
+2026-03-17 11:45:23 | INFO | P2 | cwd=.
+2026-03-17 11:45:23 | INFO | P2 | github_actions=False
+2026-03-17 11:45:23 | INFO | P2 | ========================
+2026-03-17 11:45:23 | INFO | P2 | START main()
+2026-03-17 11:45:23 | INFO | P2 | ========================
+2026-03-17 11:45:23 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:45:23 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:45:23 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:45:23 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:45:23 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:45:23 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:45:23 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:45:23 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:45:23 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:45:23 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:45:23 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:54:23 | INFO | P2 | === RUN START ===
+2026-03-17 11:54:23 | INFO | P2 | project=CINTEL
+2026-03-17 11:54:23 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:54:23 | INFO | P2 | python=3.14.0
+2026-03-17 11:54:23 | INFO | P2 | os=Windows 11
+2026-03-17 11:54:23 | INFO | P2 | shell=powershell
+2026-03-17 11:54:23 | INFO | P2 | cwd=.
+2026-03-17 11:54:23 | INFO | P2 | github_actions=False
+2026-03-17 11:54:23 | INFO | P2 | ========================
+2026-03-17 11:54:23 | INFO | P2 | START main()
+2026-03-17 11:54:23 | INFO | P2 | ========================
+2026-03-17 11:54:23 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:54:23 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:54:23 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:54:23 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:54:23 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:54:23 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:54:23 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:54:23 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:54:23 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:54:23 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:54:23 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:54:25 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 11:54:25 | INFO | P2 | MAX_REASONABLE_X_VALUE: 16.0 in years
+2026-03-17 11:54:25 | INFO | P2 | MAX_REASONABLE_Y_VALUE: 72.0 in inches
+2026-03-17 11:54:25 | INFO | P2 | Count of anomalies found: 24
+2026-03-17 11:54:25 | INFO | P2 | Wrote anomalies file: C:\Repos\cintel-02-static-anomalies\artifacts\anomalies_alex.csv
+2026-03-17 11:54:25 | INFO | P2 | ========================
+2026-03-17 11:54:25 | INFO | P2 | Pipeline executed successfully!
+2026-03-17 11:54:25 | INFO | P2 | ========================
+2026-03-17 11:54:25 | INFO | P2 | END main()
+2026-03-17 11:59:38 | INFO | P2 | === RUN START ===
+2026-03-17 11:59:38 | INFO | P2 | project=CINTEL
+2026-03-17 11:59:38 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 11:59:38 | INFO | P2 | python=3.14.0
+2026-03-17 11:59:38 | INFO | P2 | os=Windows 11
+2026-03-17 11:59:38 | INFO | P2 | shell=powershell
+2026-03-17 11:59:38 | INFO | P2 | cwd=.
+2026-03-17 11:59:38 | INFO | P2 | github_actions=False
+2026-03-17 11:59:38 | INFO | P2 | ========================
+2026-03-17 11:59:38 | INFO | P2 | START main()
+2026-03-17 11:59:38 | INFO | P2 | ========================
+2026-03-17 11:59:38 | INFO | P2 | ROOT_DIR = .
+2026-03-17 11:59:38 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 11:59:38 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 11:59:38 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 11:59:38 | INFO | P2 | Loaded 24 patient records
+2026-03-17 11:59:38 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 11:59:38 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 11:59:38 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 11:59:38 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 11:59:38 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 11:59:38 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 11:59:38 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 11:59:38 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:03:58 | INFO | P2 | === RUN START ===
+2026-03-17 12:03:58 | INFO | P2 | project=CINTEL
+2026-03-17 12:03:58 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:03:58 | INFO | P2 | python=3.14.0
+2026-03-17 12:03:58 | INFO | P2 | os=Windows 11
+2026-03-17 12:03:58 | INFO | P2 | shell=powershell
+2026-03-17 12:03:58 | INFO | P2 | cwd=.
+2026-03-17 12:03:58 | INFO | P2 | github_actions=False
+2026-03-17 12:03:58 | INFO | P2 | ========================
+2026-03-17 12:03:58 | INFO | P2 | START main()
+2026-03-17 12:03:58 | INFO | P2 | ========================
+2026-03-17 12:03:58 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:03:58 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:03:58 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:03:58 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:03:58 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:03:58 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:03:58 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:03:58 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:03:58 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:03:58 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:03:58 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:03:58 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:03:58 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:03:58 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:05:26 | INFO | P2 | === RUN START ===
+2026-03-17 12:05:26 | INFO | P2 | project=CINTEL
+2026-03-17 12:05:26 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:05:26 | INFO | P2 | python=3.14.0
+2026-03-17 12:05:26 | INFO | P2 | os=Windows 11
+2026-03-17 12:05:26 | INFO | P2 | shell=powershell
+2026-03-17 12:05:26 | INFO | P2 | cwd=.
+2026-03-17 12:05:26 | INFO | P2 | github_actions=False
+2026-03-17 12:05:26 | INFO | P2 | ========================
+2026-03-17 12:05:26 | INFO | P2 | START main()
+2026-03-17 12:05:26 | INFO | P2 | ========================
+2026-03-17 12:05:26 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:05:26 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:05:26 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:05:26 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:05:26 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:05:26 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:05:26 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:05:26 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:05:26 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:05:26 | INFO | P2 | Z scores:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:05:26 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:05:26 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:05:26 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:05:26 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:07:04 | INFO | P2 | === RUN START ===
+2026-03-17 12:07:04 | INFO | P2 | project=CINTEL
+2026-03-17 12:07:04 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:07:04 | INFO | P2 | python=3.14.0
+2026-03-17 12:07:04 | INFO | P2 | os=Windows 11
+2026-03-17 12:07:04 | INFO | P2 | shell=powershell
+2026-03-17 12:07:04 | INFO | P2 | cwd=.
+2026-03-17 12:07:04 | INFO | P2 | github_actions=False
+2026-03-17 12:07:04 | INFO | P2 | ========================
+2026-03-17 12:07:04 | INFO | P2 | START main()
+2026-03-17 12:07:04 | INFO | P2 | ========================
+2026-03-17 12:07:04 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:07:04 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:07:04 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:07:04 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:07:04 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:07:04 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:07:04 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:07:04 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:07:04 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:07:23 | INFO | P2 | === RUN START ===
+2026-03-17 12:07:23 | INFO | P2 | project=CINTEL
+2026-03-17 12:07:23 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:07:23 | INFO | P2 | python=3.14.0
+2026-03-17 12:07:23 | INFO | P2 | os=Windows 11
+2026-03-17 12:07:23 | INFO | P2 | shell=powershell
+2026-03-17 12:07:23 | INFO | P2 | cwd=.
+2026-03-17 12:07:23 | INFO | P2 | github_actions=False
+2026-03-17 12:07:23 | INFO | P2 | ========================
+2026-03-17 12:07:23 | INFO | P2 | START main()
+2026-03-17 12:07:23 | INFO | P2 | ========================
+2026-03-17 12:07:23 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:07:23 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:07:23 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:07:23 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:07:23 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:07:23 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:07:23 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:07:23 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:07:23 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:07:23 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:07:23 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:07:23 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:07:23 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:09:42 | INFO | P2 | === RUN START ===
+2026-03-17 12:09:42 | INFO | P2 | project=CINTEL
+2026-03-17 12:09:42 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:09:42 | INFO | P2 | python=3.14.0
+2026-03-17 12:09:42 | INFO | P2 | os=Windows 11
+2026-03-17 12:09:42 | INFO | P2 | shell=powershell
+2026-03-17 12:09:42 | INFO | P2 | cwd=.
+2026-03-17 12:09:42 | INFO | P2 | github_actions=False
+2026-03-17 12:09:42 | INFO | P2 | ========================
+2026-03-17 12:09:42 | INFO | P2 | START main()
+2026-03-17 12:09:42 | INFO | P2 | ========================
+2026-03-17 12:09:42 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:09:42 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:09:42 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:09:42 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:09:42 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:09:42 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:09:42 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:09:42 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:09:42 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:09:42 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:09:43 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:09:43 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:09:43 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:11:27 | INFO | P2 | === RUN START ===
+2026-03-17 12:11:27 | INFO | P2 | project=CINTEL
+2026-03-17 12:11:27 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:11:27 | INFO | P2 | python=3.14.0
+2026-03-17 12:11:27 | INFO | P2 | os=Windows 11
+2026-03-17 12:11:27 | INFO | P2 | shell=powershell
+2026-03-17 12:11:27 | INFO | P2 | cwd=.
+2026-03-17 12:11:27 | INFO | P2 | github_actions=False
+2026-03-17 12:11:27 | INFO | P2 | ========================
+2026-03-17 12:11:27 | INFO | P2 | START main()
+2026-03-17 12:11:27 | INFO | P2 | ========================
+2026-03-17 12:11:27 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:11:27 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:11:27 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:11:27 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:11:27 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:11:27 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:11:27 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:11:27 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:11:27 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:11:27 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:11:27 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:11:27 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:11:27 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:13:55 | INFO | P2 | === RUN START ===
+2026-03-17 12:13:55 | INFO | P2 | project=CINTEL
+2026-03-17 12:13:55 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:13:55 | INFO | P2 | python=3.14.0
+2026-03-17 12:13:55 | INFO | P2 | os=Windows 11
+2026-03-17 12:13:55 | INFO | P2 | shell=powershell
+2026-03-17 12:13:55 | INFO | P2 | cwd=.
+2026-03-17 12:13:55 | INFO | P2 | github_actions=False
+2026-03-17 12:13:55 | INFO | P2 | ========================
+2026-03-17 12:13:55 | INFO | P2 | START main()
+2026-03-17 12:13:55 | INFO | P2 | ========================
+2026-03-17 12:13:55 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:13:55 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:13:55 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:13:55 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:13:55 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:13:55 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:13:55 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:13:55 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:13:55 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:13:55 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:13:55 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:13:55 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:13:55 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:14:17 | INFO | P2 | === RUN START ===
+2026-03-17 12:14:17 | INFO | P2 | project=CINTEL
+2026-03-17 12:14:17 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:14:17 | INFO | P2 | python=3.14.0
+2026-03-17 12:14:17 | INFO | P2 | os=Windows 11
+2026-03-17 12:14:17 | INFO | P2 | shell=powershell
+2026-03-17 12:14:17 | INFO | P2 | cwd=.
+2026-03-17 12:14:17 | INFO | P2 | github_actions=False
+2026-03-17 12:14:17 | INFO | P2 | ========================
+2026-03-17 12:14:17 | INFO | P2 | START main()
+2026-03-17 12:14:17 | INFO | P2 | ========================
+2026-03-17 12:14:17 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:14:17 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:14:17 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:14:17 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:14:17 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:14:17 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:14:17 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:14:17 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:14:17 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:14:17 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:14:18 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:14:18 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:14:18 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:16:43 | INFO | P2 | === RUN START ===
+2026-03-17 12:16:43 | INFO | P2 | project=CINTEL
+2026-03-17 12:16:43 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:16:43 | INFO | P2 | python=3.14.0
+2026-03-17 12:16:43 | INFO | P2 | os=Windows 11
+2026-03-17 12:16:43 | INFO | P2 | shell=powershell
+2026-03-17 12:16:43 | INFO | P2 | cwd=.
+2026-03-17 12:16:43 | INFO | P2 | github_actions=False
+2026-03-17 12:16:43 | INFO | P2 | ========================
+2026-03-17 12:16:43 | INFO | P2 | START main()
+2026-03-17 12:16:43 | INFO | P2 | ========================
+2026-03-17 12:16:43 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:16:43 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:16:43 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:16:43 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:16:43 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:16:43 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:16:43 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:16:43 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:16:43 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:16:43 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:16:43 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:16:43 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:16:43 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:16:59 | INFO | P2 | === RUN START ===
+2026-03-17 12:16:59 | INFO | P2 | project=CINTEL
+2026-03-17 12:16:59 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:16:59 | INFO | P2 | python=3.14.0
+2026-03-17 12:16:59 | INFO | P2 | os=Windows 11
+2026-03-17 12:16:59 | INFO | P2 | shell=powershell
+2026-03-17 12:16:59 | INFO | P2 | cwd=.
+2026-03-17 12:16:59 | INFO | P2 | github_actions=False
+2026-03-17 12:16:59 | INFO | P2 | ========================
+2026-03-17 12:16:59 | INFO | P2 | START main()
+2026-03-17 12:16:59 | INFO | P2 | ========================
+2026-03-17 12:16:59 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:16:59 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:16:59 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:16:59 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:16:59 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:16:59 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:16:59 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:16:59 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:16:59 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:16:59 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:17:00 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:17:00 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:17:00 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:18:05 | INFO | P2 | === RUN START ===
+2026-03-17 12:18:05 | INFO | P2 | project=CINTEL
+2026-03-17 12:18:05 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:18:05 | INFO | P2 | python=3.14.0
+2026-03-17 12:18:05 | INFO | P2 | os=Windows 11
+2026-03-17 12:18:05 | INFO | P2 | shell=powershell
+2026-03-17 12:18:05 | INFO | P2 | cwd=.
+2026-03-17 12:18:05 | INFO | P2 | github_actions=False
+2026-03-17 12:18:05 | INFO | P2 | ========================
+2026-03-17 12:18:05 | INFO | P2 | START main()
+2026-03-17 12:18:05 | INFO | P2 | ========================
+2026-03-17 12:18:05 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:18:05 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:18:05 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:18:05 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:18:05 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:18:05 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:18:05 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:18:05 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:18:05 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:18:05 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:18:05 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:18:05 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:18:05 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:21:14 | INFO | P2 | === RUN START ===
+2026-03-17 12:21:14 | INFO | P2 | project=CINTEL
+2026-03-17 12:21:14 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:21:14 | INFO | P2 | python=3.14.0
+2026-03-17 12:21:14 | INFO | P2 | os=Windows 11
+2026-03-17 12:21:14 | INFO | P2 | shell=powershell
+2026-03-17 12:21:14 | INFO | P2 | cwd=.
+2026-03-17 12:21:14 | INFO | P2 | github_actions=False
+2026-03-17 12:21:14 | INFO | P2 | ========================
+2026-03-17 12:21:14 | INFO | P2 | START main()
+2026-03-17 12:21:14 | INFO | P2 | ========================
+2026-03-17 12:21:14 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:21:14 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:21:14 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:21:14 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:21:14 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:21:14 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:21:14 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:21:14 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:21:14 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:21:14 | INFO | P2 | DataFrame with Z scores and original:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:21:14 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:21:14 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:21:14 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:21:14 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:21:38 | INFO | P2 | === RUN START ===
+2026-03-17 12:21:38 | INFO | P2 | project=CINTEL
+2026-03-17 12:21:38 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:21:38 | INFO | P2 | python=3.14.0
+2026-03-17 12:21:38 | INFO | P2 | os=Windows 11
+2026-03-17 12:21:38 | INFO | P2 | shell=powershell
+2026-03-17 12:21:38 | INFO | P2 | cwd=.
+2026-03-17 12:21:38 | INFO | P2 | github_actions=False
+2026-03-17 12:21:38 | INFO | P2 | ========================
+2026-03-17 12:21:38 | INFO | P2 | START main()
+2026-03-17 12:21:38 | INFO | P2 | ========================
+2026-03-17 12:21:38 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:21:38 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:21:38 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:21:38 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:21:38 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:21:38 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:21:38 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:21:38 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:21:38 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:21:38 | INFO | P2 | DataFrame with Z scores and original:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+2026-03-17 12:21:38 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:21:38 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:21:38 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:21:38 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:23:15 | INFO | P2 | === RUN START ===
+2026-03-17 12:23:15 | INFO | P2 | project=CINTEL
+2026-03-17 12:23:15 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:23:15 | INFO | P2 | python=3.14.0
+2026-03-17 12:23:15 | INFO | P2 | os=Windows 11
+2026-03-17 12:23:15 | INFO | P2 | shell=powershell
+2026-03-17 12:23:15 | INFO | P2 | cwd=.
+2026-03-17 12:23:15 | INFO | P2 | github_actions=False
+2026-03-17 12:23:15 | INFO | P2 | ========================
+2026-03-17 12:23:15 | INFO | P2 | START main()
+2026-03-17 12:23:15 | INFO | P2 | ========================
+2026-03-17 12:23:15 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:23:15 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:23:15 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:23:15 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:23:15 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:23:15 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:23:15 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:23:15 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:23:15 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:24:41 | INFO | P2 | === RUN START ===
+2026-03-17 12:24:41 | INFO | P2 | project=CINTEL
+2026-03-17 12:24:41 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:24:41 | INFO | P2 | python=3.14.0
+2026-03-17 12:24:41 | INFO | P2 | os=Windows 11
+2026-03-17 12:24:41 | INFO | P2 | shell=powershell
+2026-03-17 12:24:41 | INFO | P2 | cwd=.
+2026-03-17 12:24:41 | INFO | P2 | github_actions=False
+2026-03-17 12:24:41 | INFO | P2 | ========================
+2026-03-17 12:24:41 | INFO | P2 | START main()
+2026-03-17 12:24:41 | INFO | P2 | ========================
+2026-03-17 12:24:41 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:24:41 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:24:41 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:24:41 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:24:41 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:24:41 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:24:41 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:24:41 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:24:41 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:26:01 | INFO | P2 | === RUN START ===
+2026-03-17 12:26:01 | INFO | P2 | project=CINTEL
+2026-03-17 12:26:01 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:26:01 | INFO | P2 | python=3.14.0
+2026-03-17 12:26:01 | INFO | P2 | os=Windows 11
+2026-03-17 12:26:01 | INFO | P2 | shell=powershell
+2026-03-17 12:26:01 | INFO | P2 | cwd=.
+2026-03-17 12:26:01 | INFO | P2 | github_actions=False
+2026-03-17 12:26:01 | INFO | P2 | ========================
+2026-03-17 12:26:01 | INFO | P2 | START main()
+2026-03-17 12:26:01 | INFO | P2 | ========================
+2026-03-17 12:26:01 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:26:01 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:26:01 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:26:01 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:26:01 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:26:01 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:26:01 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:26:01 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:26:01 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:26:21 | INFO | P2 | === RUN START ===
+2026-03-17 12:26:21 | INFO | P2 | project=CINTEL
+2026-03-17 12:26:21 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:26:21 | INFO | P2 | python=3.14.0
+2026-03-17 12:26:21 | INFO | P2 | os=Windows 11
+2026-03-17 12:26:21 | INFO | P2 | shell=powershell
+2026-03-17 12:26:21 | INFO | P2 | cwd=.
+2026-03-17 12:26:21 | INFO | P2 | github_actions=False
+2026-03-17 12:26:21 | INFO | P2 | ========================
+2026-03-17 12:26:21 | INFO | P2 | START main()
+2026-03-17 12:26:21 | INFO | P2 | ========================
+2026-03-17 12:26:21 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:26:21 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:26:21 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:26:21 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:26:21 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:26:21 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:26:21 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:26:21 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:26:21 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:28:50 | INFO | P2 | === RUN START ===
+2026-03-17 12:28:50 | INFO | P2 | project=CINTEL
+2026-03-17 12:28:50 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:28:50 | INFO | P2 | python=3.14.0
+2026-03-17 12:28:50 | INFO | P2 | os=Windows 11
+2026-03-17 12:28:50 | INFO | P2 | shell=powershell
+2026-03-17 12:28:50 | INFO | P2 | cwd=.
+2026-03-17 12:28:50 | INFO | P2 | github_actions=False
+2026-03-17 12:28:50 | INFO | P2 | ========================
+2026-03-17 12:28:50 | INFO | P2 | START main()
+2026-03-17 12:28:50 | INFO | P2 | ========================
+2026-03-17 12:28:50 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:28:50 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:28:50 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:28:50 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:28:50 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:28:50 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:28:50 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:28:50 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:28:50 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:29:25 | INFO | P2 | === RUN START ===
+2026-03-17 12:29:25 | INFO | P2 | project=CINTEL
+2026-03-17 12:29:25 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:29:25 | INFO | P2 | python=3.14.0
+2026-03-17 12:29:25 | INFO | P2 | os=Windows 11
+2026-03-17 12:29:25 | INFO | P2 | shell=powershell
+2026-03-17 12:29:25 | INFO | P2 | cwd=.
+2026-03-17 12:29:25 | INFO | P2 | github_actions=False
+2026-03-17 12:29:25 | INFO | P2 | ========================
+2026-03-17 12:29:25 | INFO | P2 | START main()
+2026-03-17 12:29:25 | INFO | P2 | ========================
+2026-03-17 12:29:25 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:29:25 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:29:25 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:29:25 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:29:25 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:29:25 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:29:25 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:29:25 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:29:25 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:30:56 | INFO | P2 | === RUN START ===
+2026-03-17 12:30:56 | INFO | P2 | project=CINTEL
+2026-03-17 12:30:56 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:30:56 | INFO | P2 | python=3.14.0
+2026-03-17 12:30:56 | INFO | P2 | os=Windows 11
+2026-03-17 12:30:56 | INFO | P2 | shell=powershell
+2026-03-17 12:30:56 | INFO | P2 | cwd=.
+2026-03-17 12:30:56 | INFO | P2 | github_actions=False
+2026-03-17 12:30:56 | INFO | P2 | ========================
+2026-03-17 12:30:56 | INFO | P2 | START main()
+2026-03-17 12:30:56 | INFO | P2 | ========================
+2026-03-17 12:30:56 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:30:56 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:30:56 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:30:56 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:30:56 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:30:56 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:30:56 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:30:56 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:30:56 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:32:14 | INFO | P2 | === RUN START ===
+2026-03-17 12:32:14 | INFO | P2 | project=CINTEL
+2026-03-17 12:32:14 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:32:14 | INFO | P2 | python=3.14.0
+2026-03-17 12:32:14 | INFO | P2 | os=Windows 11
+2026-03-17 12:32:14 | INFO | P2 | shell=powershell
+2026-03-17 12:32:14 | INFO | P2 | cwd=.
+2026-03-17 12:32:14 | INFO | P2 | github_actions=False
+2026-03-17 12:32:14 | INFO | P2 | ========================
+2026-03-17 12:32:14 | INFO | P2 | START main()
+2026-03-17 12:32:14 | INFO | P2 | ========================
+2026-03-17 12:32:14 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:32:14 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:32:14 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:32:14 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:32:14 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:32:14 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:32:14 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:32:14 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:32:14 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:33:36 | INFO | P2 | === RUN START ===
+2026-03-17 12:33:36 | INFO | P2 | project=CINTEL
+2026-03-17 12:33:36 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:33:36 | INFO | P2 | python=3.14.0
+2026-03-17 12:33:36 | INFO | P2 | os=Windows 11
+2026-03-17 12:33:36 | INFO | P2 | shell=powershell
+2026-03-17 12:33:36 | INFO | P2 | cwd=.
+2026-03-17 12:33:36 | INFO | P2 | github_actions=False
+2026-03-17 12:33:36 | INFO | P2 | ========================
+2026-03-17 12:33:36 | INFO | P2 | START main()
+2026-03-17 12:33:36 | INFO | P2 | ========================
+2026-03-17 12:33:36 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:33:36 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:33:36 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:33:36 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:33:36 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:33:36 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:33:36 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:33:36 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:33:36 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:34:12 | INFO | P2 | === RUN START ===
+2026-03-17 12:34:12 | INFO | P2 | project=CINTEL
+2026-03-17 12:34:12 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:34:12 | INFO | P2 | python=3.14.0
+2026-03-17 12:34:12 | INFO | P2 | os=Windows 11
+2026-03-17 12:34:12 | INFO | P2 | shell=powershell
+2026-03-17 12:34:12 | INFO | P2 | cwd=.
+2026-03-17 12:34:12 | INFO | P2 | github_actions=False
+2026-03-17 12:34:12 | INFO | P2 | ========================
+2026-03-17 12:34:12 | INFO | P2 | START main()
+2026-03-17 12:34:12 | INFO | P2 | ========================
+2026-03-17 12:34:12 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:34:12 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:34:12 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:34:12 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:34:12 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:34:12 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:34:12 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:34:12 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:34:12 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:34:12 | INFO | P2 | DataFrame with Z scores and original:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:34:12 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:34:14 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:34:14 | INFO | P2 | df: shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ f64       ┆ f64           │
+╞═══════════╪═══════════════╡
+│ -1.543196 ┆ -0.794511     │
+│ -1.389835 ┆ 0.343893      │
+│ -1.236474 ┆ 0.913095      │
+│ -1.121453 ┆ -0.225309     │
+│ -1.006432 ┆ 1.482298      │
+│ …         ┆ …             │
+│ 0.987262  ┆ -1.363714     │
+│ 1.140623  ┆ -0.794511     │
+│ 1.332325  ┆ -1.648315     │
+│ 1.562367  ┆ -1.932916     │
+│ 2.175811  ┆ 0.059292      │
+└───────────┴───────────────┘
+2026-03-17 12:34:14 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:35:39 | INFO | P2 | === RUN START ===
+2026-03-17 12:35:39 | INFO | P2 | project=CINTEL
+2026-03-17 12:35:39 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:35:39 | INFO | P2 | python=3.14.0
+2026-03-17 12:35:39 | INFO | P2 | os=Windows 11
+2026-03-17 12:35:39 | INFO | P2 | shell=powershell
+2026-03-17 12:35:39 | INFO | P2 | cwd=.
+2026-03-17 12:35:39 | INFO | P2 | github_actions=False
+2026-03-17 12:35:39 | INFO | P2 | ========================
+2026-03-17 12:35:39 | INFO | P2 | START main()
+2026-03-17 12:35:39 | INFO | P2 | ========================
+2026-03-17 12:35:39 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:35:39 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:35:39 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:35:39 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:35:39 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:35:39 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:35:39 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:35:39 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:35:39 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:35:39 | INFO | P2 | DataFrame with Z scores and original:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-17 12:35:39 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:35:39 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:35:39 | INFO | P2 | df: shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-17 12:35:39 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:35:39 | INFO | P2 | Count of anomalies found: 1
+2026-03-17 12:35:39 | INFO | P2 | Wrote anomalies file: C:\Repos\cintel-02-static-anomalies\artifacts\anomalies_alex.csv
+2026-03-17 12:35:39 | INFO | P2 | ========================
+2026-03-17 12:35:39 | INFO | P2 | Pipeline executed successfully!
+2026-03-17 12:35:39 | INFO | P2 | ========================
+2026-03-17 12:35:39 | INFO | P2 | END main()
+2026-03-17 12:36:29 | INFO | P2 | === RUN START ===
+2026-03-17 12:36:29 | INFO | P2 | project=CINTEL
+2026-03-17 12:36:29 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-17 12:36:29 | INFO | P2 | python=3.14.0
+2026-03-17 12:36:29 | INFO | P2 | os=Windows 11
+2026-03-17 12:36:29 | INFO | P2 | shell=powershell
+2026-03-17 12:36:29 | INFO | P2 | cwd=.
+2026-03-17 12:36:29 | INFO | P2 | github_actions=False
+2026-03-17 12:36:29 | INFO | P2 | ========================
+2026-03-17 12:36:29 | INFO | P2 | START main()
+2026-03-17 12:36:29 | INFO | P2 | ========================
+2026-03-17 12:36:29 | INFO | P2 | ROOT_DIR = .
+2026-03-17 12:36:29 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-17 12:36:29 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-17 12:36:29 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-17 12:36:29 | INFO | P2 | Loaded 24 patient records
+2026-03-17 12:36:29 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-17 12:36:29 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-17 12:36:29 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-17 12:36:29 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-17 12:36:29 | INFO | P2 | DataFrame with Z scores and original:
+shape: (24, 2)
+┌───────────┬───────────────┐
+│ age_years ┆ height_inches │
+│ ---       ┆ ---           │
+│ i64       ┆ i64           │
+╞═══════════╪═══════════════╡
+│ 21        ┆ 64            │
+│ 25        ┆ 68            │
+│ 29        ┆ 70            │
+│ 32        ┆ 66            │
+│ 35        ┆ 72            │
+│ …         ┆ …             │
+│ 87        ┆ 62            │
+│ 91        ┆ 64            │
+│ 96        ┆ 61            │
+│ 102       ┆ 60            │
+│ 118       ┆ 67            │
+└───────────┴───────────────┘
+shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-17 12:36:29 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-17 12:36:30 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies.
+2026-03-17 12:36:30 | INFO | P2 | df: shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-17 12:36:30 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-17 12:36:30 | INFO | P2 | Count of anomalies found: 1
+2026-03-17 12:36:30 | INFO | P2 | Wrote anomalies file: C:\Repos\cintel-02-static-anomalies\artifacts\anomalies_alex.csv
+2026-03-17 12:36:30 | INFO | P2 | ========================
+2026-03-17 12:36:30 | INFO | P2 | Pipeline executed successfully!
+2026-03-17 12:36:30 | INFO | P2 | ========================
+2026-03-17 12:36:30 | INFO | P2 | END main()

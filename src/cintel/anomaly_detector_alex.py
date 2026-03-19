@@ -5,6 +5,7 @@ import logging
 from pathlib import Path
 from typing import Final
 
+import matplotlib.pyplot as plt
 import polars as pl
 from datafun_toolkit.logger import get_logger, log_header, log_path
 
@@ -22,7 +23,7 @@ ARTIFACTS_DIR: Final[Path] = ROOT_DIR / "artifacts"
 
 DATA_FILE: Final[Path] = DATA_DIR / "clinic_data_alex.csv"
 OUTPUT_FILE: Final[Path] = ARTIFACTS_DIR / "anomalies_alex.csv"
-CHART_FILE: Final[Path] = ARTIFACTS_DIR / "scatter_plot_alex.html"
+CHART_FILE: Final[Path] = ARTIFACTS_DIR / "scatter_plot_alex.png"
 
 
 # === DEFINE THE MAIN FUNCTION ===
@@ -63,7 +64,7 @@ def main() -> None:
     # Call the polars library read_csv() method.
     # Pass in (provide) the DATA_FILE path of the CSV file.
     # Name the result "df" as is customary.
-    df: pl.DataFrame = pl.read_csv(DATA_FILE)
+    df = pl.DataFrame = pl.read_csv(DATA_FILE)
 
     # Visually inspect the file in the data/ folder.
     # It has columns named `age_years` and `height_inches`.
@@ -87,53 +88,48 @@ def main() -> None:
     average_values = df.select(average_values_both_columns)
     LOG.info(f"Average values:\n{average_values}")
     LOG.info("Calculating Z scores for age_years and height_inches")
-    z_score = df.select(
-        (pl.col("age_years") - pl.col("age_years").mean())
-        / pl.col("age_years").std().name.prefix("z_"),
-        (pl.col("height_inches") - pl.col("height_inches").mean())
-        / pl.col("height_inches").std().name.prefix("z_"),
+    dfz = df.with_columns(
+        [
+            (
+                (pl.col("age_years") - pl.col("age_years").mean())
+                / pl.col("age_years").std()
+            ).alias("z_age_years"),
+            (
+                (pl.col("height_inches") - pl.col("height_inches").mean())
+                / pl.col("height_inches").std()
+            ).alias("z_height_inches"),
+        ]
     )
-    LOG.info(f"Z scores:\n{z_score}")
+
+    LOG.info(f"DataFrame with Z scores and original:\n{dfz}")
 
     # Let's plot the data to visually inspect it and help us choose reasonable thresholds for anomalies.
     # We can use the polars plotting capabilities to create a scatter plot of age_years
     # vs height_inches. This will help us see if there are any obvious outliers and where they are located.
     LOG.info("Creating scatter plot of age_years vs height_inches")
-    chart = (
-        df.plot.point(
-            x="age_years",
-            y="height_inches",
-            color="species",
-        )
-        .properties(width=500, title="Irises")
-        .configure_scale(zero=False)
-        .configure_axisX(tickMinStep=1)
+    fig, ax = plt.subplots()
+    ax.scatter(
+        x=df["age_years"],
+        y=df["height_inches"],
     )
-    chart.encoding.x.title = "Age (years)"
-    chart.encoding.y.title = "Height (inches)"
-    # chart.save('chart.html')
+    ax.set_title('Scatterplot of Age vs Height')
+    ax.set_xlabel('Age (years)')
+    ax.set_ylabel('Height (inches)')
+    plt.savefig(CHART_FILE)
 
     LOG.info(
-        "Scatter plot created. Please inspect the plot to identify any obvious outliers and determine reasonable thresholds for anomalies."
+        "Scatter plot created. Please inspect the plot to identify any obvious outliers"
     )
-    # x is age in years, so 16 is the upper limit for kids
-    MAX_REASONABLE_X_VALUE: Final[float] = 16.0
-
-    # y is height in inches, so maybe 6 feet (72 inches) is a reasonable upper limit
-    MAX_REASONABLE_Y_VALUE: Final[float] = 72.0
-
-    LOG.info(f"MAX_REASONABLE_X_VALUE: {MAX_REASONABLE_X_VALUE} in years")
-    LOG.info(f"MAX_REASONABLE_Y_VALUE: {MAX_REASONABLE_Y_VALUE} in inches")
-
-    # Create a new DataFrame named anomalies_df that contains
-    # only the rows where EITHER
-    # the age is TOO HIGH OR
-    # the height is TOO HIGH.
+    # We'll flag an anomaly as any value with a Z score greater than 2 or less than -2, which is a common threshold for identifying outliers in a normal distribution.
+    # We could have used raw values and set thresholds based on average human longevity. And age doesn't neccesssarily have a normal distribution, but I wanted to demonstrate how to calculate Z scores and use them for anomaly detection, which is a common technique in data science.
+    MAX_REASONABLE_Z_VALUE: Final[float] = 2.0
+    LOG.info(f"df: {dfz}")
+    LOG.info(f"MAX_REASONABLE_Z_VALUE: {MAX_REASONABLE_Z_VALUE}")
     # A single pipe (|) is the OR operator in polars.
-    # We will use greater than or equal to (>=) to find values at or above the threshold.
-    anomalies_df: pl.DataFrame = df.filter(
-        (pl.col("age_years") >= MAX_REASONABLE_X_VALUE)
-        | (pl.col("height_inches") >= MAX_REASONABLE_Y_VALUE)
+    # We will use the absolute value of the Z score to find values that are either above or below the mean by more than the threshold.
+    anomalies_df: pl.DataFrame = dfz.filter(
+        (pl.col("z_age_years").abs() >= MAX_REASONABLE_Z_VALUE)
+        | (pl.col("z_height_inches").abs() >= MAX_REASONABLE_Z_VALUE)
     )
 
     LOG.info(f"Count of anomalies found: {anomalies_df.height}")

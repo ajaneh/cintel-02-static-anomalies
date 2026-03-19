@@ -11,9 +11,10 @@ requires-python = ">=3.14"
 version = "0.1.0"
 
 dependencies = [
-    "altair>=6.0.0",
     # REQ.DEPS: External packages used by the project code.
+    "altair-saver>=0.5.0",
     "datafun-toolkit",
+    "matplotlib>=3.10.8",
     "polars[rtcompat]",
 ]
 
