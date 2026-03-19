@@ -2245,3 +2245,1435 @@ shape: (24, 4)
 2026-03-17 12:36:30 | INFO | P2 | Pipeline executed successfully!
 2026-03-17 12:36:30 | INFO | P2 | ========================
 2026-03-17 12:36:30 | INFO | P2 | END main()
+2026-03-19 10:29:33 | INFO | P2 | === RUN START ===
+2026-03-19 10:29:33 | INFO | P2 | project=CINTEL
+2026-03-19 10:29:33 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 10:29:33 | INFO | P2 | python=3.14.0
+2026-03-19 10:29:33 | INFO | P2 | os=Windows 11
+2026-03-19 10:29:33 | INFO | P2 | shell=powershell
+2026-03-19 10:29:33 | INFO | P2 | cwd=.
+2026-03-19 10:29:33 | INFO | P2 | github_actions=False
+2026-03-19 10:29:33 | INFO | P2 | ========================
+2026-03-19 10:29:33 | INFO | P2 | START main()
+2026-03-19 10:29:33 | INFO | P2 | ========================
+2026-03-19 10:29:33 | INFO | P2 | ROOT_DIR = .
+2026-03-19 10:29:33 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-19 10:29:33 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-19 10:29:33 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 10:29:33 | INFO | P2 | Loaded 24 patient records
+2026-03-19 10:29:33 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 10:29:33 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-19 10:29:33 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-19 10:29:33 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-19 10:29:33 | INFO | P2 | DataFrame with Z scores and original:
+shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-19 10:29:33 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 10:29:35 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers
+2026-03-19 10:29:35 | INFO | P2 | df: shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-19 10:29:35 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-19 10:29:35 | INFO | P2 | Count of anomalies found: 1
+2026-03-19 10:29:35 | INFO | P2 | Wrote anomalies file: C:\Repos\cintel-02-static-anomalies\artifacts\anomalies_alex.csv
+2026-03-19 10:29:35 | INFO | P2 | ========================
+2026-03-19 10:29:35 | INFO | P2 | Pipeline executed successfully!
+2026-03-19 10:29:35 | INFO | P2 | ========================
+2026-03-19 10:29:35 | INFO | P2 | END main()
+2026-03-19 11:22:47 | INFO | P2 | === RUN START ===
+2026-03-19 11:22:47 | INFO | P2 | project=CINTEL
+2026-03-19 11:22:47 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:22:47 | INFO | P2 | python=3.14.0
+2026-03-19 11:22:47 | INFO | P2 | os=Windows 11
+2026-03-19 11:22:47 | INFO | P2 | shell=powershell
+2026-03-19 11:22:47 | INFO | P2 | cwd=.
+2026-03-19 11:22:47 | INFO | P2 | github_actions=False
+2026-03-19 11:22:47 | INFO | P2 | ========================
+2026-03-19 11:22:47 | INFO | P2 | START main()
+2026-03-19 11:22:47 | INFO | P2 | ========================
+2026-03-19 11:22:47 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:22:47 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:22:47 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:22:47 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:23:30 | INFO | P2 | === RUN START ===
+2026-03-19 11:23:30 | INFO | P2 | project=CINTEL
+2026-03-19 11:23:30 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:23:30 | INFO | P2 | python=3.14.0
+2026-03-19 11:23:30 | INFO | P2 | os=Windows 11
+2026-03-19 11:23:30 | INFO | P2 | shell=powershell
+2026-03-19 11:23:30 | INFO | P2 | cwd=.
+2026-03-19 11:23:30 | INFO | P2 | github_actions=False
+2026-03-19 11:23:30 | INFO | P2 | ========================
+2026-03-19 11:23:30 | INFO | P2 | START main()
+2026-03-19 11:23:30 | INFO | P2 | ========================
+2026-03-19 11:23:30 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:23:30 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:23:30 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:23:30 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:23:30 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:23:30 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:23:30 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:26:34 | INFO | P2 | === RUN START ===
+2026-03-19 11:26:34 | INFO | P2 | project=CINTEL
+2026-03-19 11:26:34 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:26:34 | INFO | P2 | python=3.14.0
+2026-03-19 11:26:34 | INFO | P2 | os=Windows 11
+2026-03-19 11:26:34 | INFO | P2 | shell=powershell
+2026-03-19 11:26:34 | INFO | P2 | cwd=.
+2026-03-19 11:26:34 | INFO | P2 | github_actions=False
+2026-03-19 11:26:34 | INFO | P2 | ========================
+2026-03-19 11:26:34 | INFO | P2 | START main()
+2026-03-19 11:26:34 | INFO | P2 | ========================
+2026-03-19 11:26:34 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:26:34 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:26:34 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:26:34 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:26:34 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:26:34 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 0      │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:26:34 | INFO | P2 | Remaining records after dropping nulls: 314
+2026-03-19 11:26:34 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:26:34 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:28:08 | INFO | P2 | === RUN START ===
+2026-03-19 11:28:08 | INFO | P2 | project=CINTEL
+2026-03-19 11:28:08 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:28:08 | INFO | P2 | python=3.14.0
+2026-03-19 11:28:08 | INFO | P2 | os=Windows 11
+2026-03-19 11:28:08 | INFO | P2 | shell=powershell
+2026-03-19 11:28:08 | INFO | P2 | cwd=.
+2026-03-19 11:28:08 | INFO | P2 | github_actions=False
+2026-03-19 11:28:08 | INFO | P2 | ========================
+2026-03-19 11:28:08 | INFO | P2 | START main()
+2026-03-19 11:28:08 | INFO | P2 | ========================
+2026-03-19 11:28:08 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:28:08 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:28:08 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:28:08 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:28:08 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:28:08 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:28:08 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:28:08 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:28:08 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:29:20 | INFO | P2 | === RUN START ===
+2026-03-19 11:29:20 | INFO | P2 | project=CINTEL
+2026-03-19 11:29:20 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:29:20 | INFO | P2 | python=3.14.0
+2026-03-19 11:29:20 | INFO | P2 | os=Windows 11
+2026-03-19 11:29:20 | INFO | P2 | shell=powershell
+2026-03-19 11:29:20 | INFO | P2 | cwd=.
+2026-03-19 11:29:20 | INFO | P2 | github_actions=False
+2026-03-19 11:29:20 | INFO | P2 | ========================
+2026-03-19 11:29:20 | INFO | P2 | START main()
+2026-03-19 11:29:20 | INFO | P2 | ========================
+2026-03-19 11:29:20 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:29:20 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:29:20 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:29:20 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:29:20 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:29:20 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:29:20 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:29:20 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:29:20 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:29:56 | INFO | P2 | === RUN START ===
+2026-03-19 11:29:56 | INFO | P2 | project=CINTEL
+2026-03-19 11:29:56 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:29:56 | INFO | P2 | python=3.14.0
+2026-03-19 11:29:56 | INFO | P2 | os=Windows 11
+2026-03-19 11:29:56 | INFO | P2 | shell=powershell
+2026-03-19 11:29:56 | INFO | P2 | cwd=.
+2026-03-19 11:29:56 | INFO | P2 | github_actions=False
+2026-03-19 11:29:56 | INFO | P2 | ========================
+2026-03-19 11:29:56 | INFO | P2 | START main()
+2026-03-19 11:29:56 | INFO | P2 | ========================
+2026-03-19 11:29:56 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:29:56 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:29:56 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:29:56 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:29:56 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:29:56 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:29:56 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:29:56 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:29:56 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:31:15 | INFO | P2 | === RUN START ===
+2026-03-19 11:31:15 | INFO | P2 | project=CINTEL
+2026-03-19 11:31:15 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:31:15 | INFO | P2 | python=3.14.0
+2026-03-19 11:31:15 | INFO | P2 | os=Windows 11
+2026-03-19 11:31:15 | INFO | P2 | shell=powershell
+2026-03-19 11:31:15 | INFO | P2 | cwd=.
+2026-03-19 11:31:15 | INFO | P2 | github_actions=False
+2026-03-19 11:31:15 | INFO | P2 | ========================
+2026-03-19 11:31:15 | INFO | P2 | START main()
+2026-03-19 11:31:15 | INFO | P2 | ========================
+2026-03-19 11:31:15 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:31:15 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:31:15 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:31:15 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:31:15 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:31:15 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:31:15 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:31:15 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:33:15 | INFO | P2 | === RUN START ===
+2026-03-19 11:33:15 | INFO | P2 | project=CINTEL
+2026-03-19 11:33:15 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:33:15 | INFO | P2 | python=3.14.0
+2026-03-19 11:33:15 | INFO | P2 | os=Windows 11
+2026-03-19 11:33:15 | INFO | P2 | shell=powershell
+2026-03-19 11:33:15 | INFO | P2 | cwd=.
+2026-03-19 11:33:15 | INFO | P2 | github_actions=False
+2026-03-19 11:33:15 | INFO | P2 | ========================
+2026-03-19 11:33:15 | INFO | P2 | START main()
+2026-03-19 11:33:15 | INFO | P2 | ========================
+2026-03-19 11:33:15 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:33:15 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:33:15 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:33:15 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:33:15 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:33:15 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:33:15 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:33:15 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:34:38 | INFO | P2 | === RUN START ===
+2026-03-19 11:34:38 | INFO | P2 | project=CINTEL
+2026-03-19 11:34:38 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:34:38 | INFO | P2 | python=3.14.0
+2026-03-19 11:34:38 | INFO | P2 | os=Windows 11
+2026-03-19 11:34:38 | INFO | P2 | shell=powershell
+2026-03-19 11:34:38 | INFO | P2 | cwd=.
+2026-03-19 11:34:38 | INFO | P2 | github_actions=False
+2026-03-19 11:34:38 | INFO | P2 | ========================
+2026-03-19 11:34:38 | INFO | P2 | START main()
+2026-03-19 11:34:38 | INFO | P2 | ========================
+2026-03-19 11:34:38 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:34:38 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:34:38 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:34:38 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:34:38 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:34:38 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:34:38 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:34:38 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:35:21 | INFO | P2 | === RUN START ===
+2026-03-19 11:35:21 | INFO | P2 | project=CINTEL
+2026-03-19 11:35:21 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:35:21 | INFO | P2 | python=3.14.0
+2026-03-19 11:35:21 | INFO | P2 | os=Windows 11
+2026-03-19 11:35:21 | INFO | P2 | shell=powershell
+2026-03-19 11:35:21 | INFO | P2 | cwd=.
+2026-03-19 11:35:21 | INFO | P2 | github_actions=False
+2026-03-19 11:35:21 | INFO | P2 | ========================
+2026-03-19 11:35:21 | INFO | P2 | START main()
+2026-03-19 11:35:21 | INFO | P2 | ========================
+2026-03-19 11:35:21 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:35:21 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:35:21 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:35:21 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:35:21 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:35:21 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:35:21 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:35:21 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:36:08 | INFO | P2 | === RUN START ===
+2026-03-19 11:36:08 | INFO | P2 | project=CINTEL
+2026-03-19 11:36:08 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:36:08 | INFO | P2 | python=3.14.0
+2026-03-19 11:36:08 | INFO | P2 | os=Windows 11
+2026-03-19 11:36:08 | INFO | P2 | shell=powershell
+2026-03-19 11:36:08 | INFO | P2 | cwd=.
+2026-03-19 11:36:08 | INFO | P2 | github_actions=False
+2026-03-19 11:36:08 | INFO | P2 | ========================
+2026-03-19 11:36:08 | INFO | P2 | START main()
+2026-03-19 11:36:08 | INFO | P2 | ========================
+2026-03-19 11:36:08 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:36:08 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:36:08 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:36:08 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:36:08 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:36:08 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:36:08 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:36:08 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:39:34 | INFO | P2 | === RUN START ===
+2026-03-19 11:39:34 | INFO | P2 | project=CINTEL
+2026-03-19 11:39:34 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:39:34 | INFO | P2 | python=3.14.0
+2026-03-19 11:39:34 | INFO | P2 | os=Windows 11
+2026-03-19 11:39:34 | INFO | P2 | shell=powershell
+2026-03-19 11:39:34 | INFO | P2 | cwd=.
+2026-03-19 11:39:34 | INFO | P2 | github_actions=False
+2026-03-19 11:39:34 | INFO | P2 | ========================
+2026-03-19 11:39:34 | INFO | P2 | START main()
+2026-03-19 11:39:34 | INFO | P2 | ========================
+2026-03-19 11:39:34 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:39:34 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:39:34 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:39:34 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:39:34 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:39:34 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:39:34 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:39:34 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:39:34 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:39:58 | INFO | P2 | === RUN START ===
+2026-03-19 11:39:58 | INFO | P2 | project=CINTEL
+2026-03-19 11:39:58 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:39:58 | INFO | P2 | python=3.14.0
+2026-03-19 11:39:58 | INFO | P2 | os=Windows 11
+2026-03-19 11:39:58 | INFO | P2 | shell=powershell
+2026-03-19 11:39:58 | INFO | P2 | cwd=.
+2026-03-19 11:39:58 | INFO | P2 | github_actions=False
+2026-03-19 11:39:58 | INFO | P2 | ========================
+2026-03-19 11:39:58 | INFO | P2 | START main()
+2026-03-19 11:39:58 | INFO | P2 | ========================
+2026-03-19 11:39:58 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:39:58 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:39:58 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:39:58 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:39:58 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:39:58 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:39:58 | INFO | P2 | Remaining records after dropping nulls: 314
+2026-03-19 11:39:58 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:39:58 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:40:17 | INFO | P2 | === RUN START ===
+2026-03-19 11:40:17 | INFO | P2 | project=CINTEL
+2026-03-19 11:40:17 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:40:17 | INFO | P2 | python=3.14.0
+2026-03-19 11:40:17 | INFO | P2 | os=Windows 11
+2026-03-19 11:40:17 | INFO | P2 | shell=powershell
+2026-03-19 11:40:17 | INFO | P2 | cwd=.
+2026-03-19 11:40:17 | INFO | P2 | github_actions=False
+2026-03-19 11:40:17 | INFO | P2 | ========================
+2026-03-19 11:40:17 | INFO | P2 | START main()
+2026-03-19 11:40:17 | INFO | P2 | ========================
+2026-03-19 11:40:17 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:40:17 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:40:17 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:40:17 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:40:17 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:40:17 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:40:17 | INFO | P2 | Remaining records after dropping nulls: 314
+2026-03-19 11:40:17 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:40:17 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:41:07 | INFO | P2 | === RUN START ===
+2026-03-19 11:41:07 | INFO | P2 | project=CINTEL
+2026-03-19 11:41:07 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:41:07 | INFO | P2 | python=3.14.0
+2026-03-19 11:41:07 | INFO | P2 | os=Windows 11
+2026-03-19 11:41:07 | INFO | P2 | shell=powershell
+2026-03-19 11:41:07 | INFO | P2 | cwd=.
+2026-03-19 11:41:07 | INFO | P2 | github_actions=False
+2026-03-19 11:41:07 | INFO | P2 | ========================
+2026-03-19 11:41:07 | INFO | P2 | START main()
+2026-03-19 11:41:07 | INFO | P2 | ========================
+2026-03-19 11:41:07 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:41:07 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:41:07 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:41:07 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:41:07 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:41:07 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:41:07 | INFO | P2 | Remaining records after dropping nulls: 314
+2026-03-19 11:41:07 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:41:07 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:41:29 | INFO | P2 | === RUN START ===
+2026-03-19 11:41:29 | INFO | P2 | project=CINTEL
+2026-03-19 11:41:29 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:41:29 | INFO | P2 | python=3.14.0
+2026-03-19 11:41:29 | INFO | P2 | os=Windows 11
+2026-03-19 11:41:29 | INFO | P2 | shell=powershell
+2026-03-19 11:41:29 | INFO | P2 | cwd=.
+2026-03-19 11:41:29 | INFO | P2 | github_actions=False
+2026-03-19 11:41:29 | INFO | P2 | ========================
+2026-03-19 11:41:29 | INFO | P2 | START main()
+2026-03-19 11:41:29 | INFO | P2 | ========================
+2026-03-19 11:41:29 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:41:29 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:41:29 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:41:29 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:41:29 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:41:29 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:41:29 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:41:29 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:41:29 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:42:22 | INFO | P2 | === RUN START ===
+2026-03-19 11:42:22 | INFO | P2 | project=CINTEL
+2026-03-19 11:42:22 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:42:22 | INFO | P2 | python=3.14.0
+2026-03-19 11:42:22 | INFO | P2 | os=Windows 11
+2026-03-19 11:42:22 | INFO | P2 | shell=powershell
+2026-03-19 11:42:22 | INFO | P2 | cwd=.
+2026-03-19 11:42:22 | INFO | P2 | github_actions=False
+2026-03-19 11:42:22 | INFO | P2 | ========================
+2026-03-19 11:42:22 | INFO | P2 | START main()
+2026-03-19 11:42:22 | INFO | P2 | ========================
+2026-03-19 11:42:22 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:42:22 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:42:22 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:42:22 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:42:22 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:42:22 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:42:22 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:42:22 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:42:22 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:42:22 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬──────────┐
+│ pageviews ┆ visits   │
+│ ---       ┆ ---      │
+│ str       ┆ f64      │
+╞═══════════╪══════════╡
+│ null      ┆ 3.9937e7 │
+└───────────┴──────────┘
+2026-03-19 11:42:22 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 11:45:20 | INFO | P2 | === RUN START ===
+2026-03-19 11:45:20 | INFO | P2 | project=CINTEL
+2026-03-19 11:45:20 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:45:20 | INFO | P2 | python=3.14.0
+2026-03-19 11:45:20 | INFO | P2 | os=Windows 11
+2026-03-19 11:45:20 | INFO | P2 | shell=powershell
+2026-03-19 11:45:20 | INFO | P2 | cwd=.
+2026-03-19 11:45:20 | INFO | P2 | github_actions=False
+2026-03-19 11:45:20 | INFO | P2 | ========================
+2026-03-19 11:45:20 | INFO | P2 | START main()
+2026-03-19 11:45:20 | INFO | P2 | ========================
+2026-03-19 11:45:20 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:45:20 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:45:20 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:45:20 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:45:20 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:45:20 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:45:20 | INFO | P2 | Remaining records after dropping nulls: 0
+2026-03-19 11:45:20 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:45:20 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:45:20 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f64       ┆ f64    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 11:45:20 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 11:45:20 | INFO | P2 | DataFrame with Z scores and original:
+shape: (0, 4)
+┌───────────┬────────┬─────────────┬──────────┐
+│ pageviews ┆ visits ┆ z_pageviews ┆ z_visits │
+│ ---       ┆ ---    ┆ ---         ┆ ---      │
+│ f64       ┆ f64    ┆ f64         ┆ f64      │
+╞═══════════╪════════╪═════════════╪══════════╡
+└───────────┴────────┴─────────────┴──────────┘
+2026-03-19 11:45:20 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 11:45:40 | INFO | P2 | === RUN START ===
+2026-03-19 11:45:40 | INFO | P2 | project=CINTEL
+2026-03-19 11:45:40 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:45:40 | INFO | P2 | python=3.14.0
+2026-03-19 11:45:40 | INFO | P2 | os=Windows 11
+2026-03-19 11:45:40 | INFO | P2 | shell=powershell
+2026-03-19 11:45:40 | INFO | P2 | cwd=.
+2026-03-19 11:45:40 | INFO | P2 | github_actions=False
+2026-03-19 11:45:40 | INFO | P2 | ========================
+2026-03-19 11:45:40 | INFO | P2 | START main()
+2026-03-19 11:45:40 | INFO | P2 | ========================
+2026-03-19 11:45:40 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:45:40 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:45:40 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:45:40 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:45:40 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:45:40 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 0      │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:45:40 | INFO | P2 | Remaining records after dropping nulls: 0
+2026-03-19 11:45:40 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:45:40 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:45:40 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f64       ┆ f64    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 11:45:40 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 11:45:40 | INFO | P2 | DataFrame with Z scores and original:
+shape: (0, 4)
+┌───────────┬────────┬─────────────┬──────────┐
+│ pageviews ┆ visits ┆ z_pageviews ┆ z_visits │
+│ ---       ┆ ---    ┆ ---         ┆ ---      │
+│ f64       ┆ f64    ┆ f64         ┆ f64      │
+╞═══════════╪════════╪═════════════╪══════════╡
+└───────────┴────────┴─────────────┴──────────┘
+2026-03-19 11:45:40 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 11:46:42 | INFO | P2 | === RUN START ===
+2026-03-19 11:46:42 | INFO | P2 | project=CINTEL
+2026-03-19 11:46:42 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:46:42 | INFO | P2 | python=3.14.0
+2026-03-19 11:46:42 | INFO | P2 | os=Windows 11
+2026-03-19 11:46:42 | INFO | P2 | shell=powershell
+2026-03-19 11:46:42 | INFO | P2 | cwd=.
+2026-03-19 11:46:42 | INFO | P2 | github_actions=False
+2026-03-19 11:46:42 | INFO | P2 | ========================
+2026-03-19 11:46:42 | INFO | P2 | START main()
+2026-03-19 11:46:42 | INFO | P2 | ========================
+2026-03-19 11:46:42 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:46:42 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:46:42 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:46:42 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:46:42 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:46:42 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 0      │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:48:08 | INFO | P2 | === RUN START ===
+2026-03-19 11:48:08 | INFO | P2 | project=CINTEL
+2026-03-19 11:48:08 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:48:08 | INFO | P2 | python=3.14.0
+2026-03-19 11:48:08 | INFO | P2 | os=Windows 11
+2026-03-19 11:48:08 | INFO | P2 | shell=powershell
+2026-03-19 11:48:08 | INFO | P2 | cwd=.
+2026-03-19 11:48:08 | INFO | P2 | github_actions=False
+2026-03-19 11:48:08 | INFO | P2 | ========================
+2026-03-19 11:48:08 | INFO | P2 | START main()
+2026-03-19 11:48:08 | INFO | P2 | ========================
+2026-03-19 11:48:08 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:48:08 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:48:08 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:48:08 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:48:08 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:48:08 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 0      │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:49:55 | INFO | P2 | === RUN START ===
+2026-03-19 11:49:55 | INFO | P2 | project=CINTEL
+2026-03-19 11:49:55 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:49:55 | INFO | P2 | python=3.14.0
+2026-03-19 11:49:55 | INFO | P2 | os=Windows 11
+2026-03-19 11:49:55 | INFO | P2 | shell=powershell
+2026-03-19 11:49:55 | INFO | P2 | cwd=.
+2026-03-19 11:49:55 | INFO | P2 | github_actions=False
+2026-03-19 11:49:55 | INFO | P2 | ========================
+2026-03-19 11:49:55 | INFO | P2 | START main()
+2026-03-19 11:49:55 | INFO | P2 | ========================
+2026-03-19 11:49:55 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:49:55 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:49:55 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:49:55 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:49:55 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:49:55 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:50:22 | INFO | P2 | === RUN START ===
+2026-03-19 11:50:22 | INFO | P2 | project=CINTEL
+2026-03-19 11:50:22 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:50:22 | INFO | P2 | python=3.14.0
+2026-03-19 11:50:22 | INFO | P2 | os=Windows 11
+2026-03-19 11:50:22 | INFO | P2 | shell=powershell
+2026-03-19 11:50:22 | INFO | P2 | cwd=.
+2026-03-19 11:50:22 | INFO | P2 | github_actions=False
+2026-03-19 11:50:22 | INFO | P2 | ========================
+2026-03-19 11:50:22 | INFO | P2 | START main()
+2026-03-19 11:50:22 | INFO | P2 | ========================
+2026-03-19 11:50:22 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:50:22 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:50:22 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:50:22 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:50:22 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:50:22 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:51:44 | INFO | P2 | === RUN START ===
+2026-03-19 11:51:44 | INFO | P2 | project=CINTEL
+2026-03-19 11:51:44 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:51:44 | INFO | P2 | python=3.14.0
+2026-03-19 11:51:44 | INFO | P2 | os=Windows 11
+2026-03-19 11:51:44 | INFO | P2 | shell=powershell
+2026-03-19 11:51:44 | INFO | P2 | cwd=.
+2026-03-19 11:51:44 | INFO | P2 | github_actions=False
+2026-03-19 11:51:44 | INFO | P2 | ========================
+2026-03-19 11:51:44 | INFO | P2 | START main()
+2026-03-19 11:51:44 | INFO | P2 | ========================
+2026-03-19 11:51:44 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:51:44 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:51:44 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:51:44 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:51:44 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:52:33 | INFO | P2 | === RUN START ===
+2026-03-19 11:52:33 | INFO | P2 | project=CINTEL
+2026-03-19 11:52:33 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:52:33 | INFO | P2 | python=3.14.0
+2026-03-19 11:52:33 | INFO | P2 | os=Windows 11
+2026-03-19 11:52:33 | INFO | P2 | shell=powershell
+2026-03-19 11:52:33 | INFO | P2 | cwd=.
+2026-03-19 11:52:33 | INFO | P2 | github_actions=False
+2026-03-19 11:52:33 | INFO | P2 | ========================
+2026-03-19 11:52:33 | INFO | P2 | START main()
+2026-03-19 11:52:33 | INFO | P2 | ========================
+2026-03-19 11:52:33 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:52:33 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:52:33 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:52:33 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:52:33 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:52:33 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:53:23 | INFO | P2 | === RUN START ===
+2026-03-19 11:53:23 | INFO | P2 | project=CINTEL
+2026-03-19 11:53:23 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:53:23 | INFO | P2 | python=3.14.0
+2026-03-19 11:53:23 | INFO | P2 | os=Windows 11
+2026-03-19 11:53:23 | INFO | P2 | shell=powershell
+2026-03-19 11:53:23 | INFO | P2 | cwd=.
+2026-03-19 11:53:23 | INFO | P2 | github_actions=False
+2026-03-19 11:53:23 | INFO | P2 | ========================
+2026-03-19 11:53:23 | INFO | P2 | START main()
+2026-03-19 11:53:23 | INFO | P2 | ========================
+2026-03-19 11:53:23 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:53:23 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:53:23 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:53:23 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:53:24 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:53:24 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:53:24 | INFO | P2 | DataFrame after casting to Float64:
+shape: (314, 2)
+┌───────────┬─────────────┐
+│ pageviews ┆ visits      │
+│ ---       ┆ ---         │
+│ f64       ┆ f64         │
+╞═══════════╪═════════════╡
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ …         ┆ …           │
+│ null      ┆ 1.2150365e7 │
+│ null      ┆ 1.3659849e7 │
+│ null      ┆ 1.3463788e7 │
+│ null      ┆ 1.2709502e7 │
+│ null      ┆ 1.1423767e7 │
+└───────────┴─────────────┘
+2026-03-19 11:53:24 | INFO | P2 | Remaining records after dropping nulls: 0
+2026-03-19 11:53:24 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:53:24 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:53:24 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f64       ┆ f64    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 11:53:24 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 11:53:24 | INFO | P2 | DataFrame with Z scores and original:
+shape: (0, 4)
+┌───────────┬────────┬─────────────┬──────────┐
+│ pageviews ┆ visits ┆ z_pageviews ┆ z_visits │
+│ ---       ┆ ---    ┆ ---         ┆ ---      │
+│ f64       ┆ f64    ┆ f64         ┆ f64      │
+╞═══════════╪════════╪═════════════╪══════════╡
+└───────────┴────────┴─────────────┴──────────┘
+2026-03-19 11:53:24 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 11:54:16 | INFO | P2 | === RUN START ===
+2026-03-19 11:54:16 | INFO | P2 | project=CINTEL
+2026-03-19 11:54:16 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:54:16 | INFO | P2 | python=3.14.0
+2026-03-19 11:54:16 | INFO | P2 | os=Windows 11
+2026-03-19 11:54:16 | INFO | P2 | shell=powershell
+2026-03-19 11:54:16 | INFO | P2 | cwd=.
+2026-03-19 11:54:16 | INFO | P2 | github_actions=False
+2026-03-19 11:54:16 | INFO | P2 | ========================
+2026-03-19 11:54:16 | INFO | P2 | START main()
+2026-03-19 11:54:16 | INFO | P2 | ========================
+2026-03-19 11:54:16 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:54:16 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:54:16 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:54:16 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:54:16 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:54:16 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:54:16 | INFO | P2 | DataFrame after casting to Float64:
+shape: (314, 2)
+┌───────────┬─────────────┐
+│ pageviews ┆ visits      │
+│ ---       ┆ ---         │
+│ f64       ┆ f64         │
+╞═══════════╪═════════════╡
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ …         ┆ …           │
+│ null      ┆ 1.2150365e7 │
+│ null      ┆ 1.3659849e7 │
+│ null      ┆ 1.3463788e7 │
+│ null      ┆ 1.2709502e7 │
+│ null      ┆ 1.1423767e7 │
+└───────────┴─────────────┘
+2026-03-19 11:54:16 | INFO | P2 | Remaining records after dropping nulls: 261
+2026-03-19 11:54:16 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:54:16 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:54:16 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬──────────┐
+│ pageviews ┆ visits   │
+│ ---       ┆ ---      │
+│ str       ┆ f64      │
+╞═══════════╪══════════╡
+│ null      ┆ 3.9937e7 │
+└───────────┴──────────┘
+2026-03-19 11:54:16 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 11:54:56 | INFO | P2 | === RUN START ===
+2026-03-19 11:54:56 | INFO | P2 | project=CINTEL
+2026-03-19 11:54:56 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:54:56 | INFO | P2 | python=3.14.0
+2026-03-19 11:54:56 | INFO | P2 | os=Windows 11
+2026-03-19 11:54:56 | INFO | P2 | shell=powershell
+2026-03-19 11:54:56 | INFO | P2 | cwd=.
+2026-03-19 11:54:56 | INFO | P2 | github_actions=False
+2026-03-19 11:54:56 | INFO | P2 | ========================
+2026-03-19 11:54:56 | INFO | P2 | START main()
+2026-03-19 11:54:56 | INFO | P2 | ========================
+2026-03-19 11:54:56 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:54:56 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:54:56 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:54:56 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:54:56 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:54:56 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:54:56 | INFO | P2 | DataFrame after casting to Float64:
+shape: (314, 2)
+┌───────────┬─────────────┐
+│ pageviews ┆ visits      │
+│ ---       ┆ ---         │
+│ f64       ┆ f64         │
+╞═══════════╪═════════════╡
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ null      ┆ null        │
+│ …         ┆ …           │
+│ null      ┆ 1.2150365e7 │
+│ null      ┆ 1.3659849e7 │
+│ null      ┆ 1.3463788e7 │
+│ null      ┆ 1.2709502e7 │
+│ null      ┆ 1.1423767e7 │
+└───────────┴─────────────┘
+2026-03-19 11:54:56 | INFO | P2 | Remaining records after dropping nulls: 0
+2026-03-19 11:54:56 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:54:56 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:54:56 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f64       ┆ f64    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 11:54:56 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 11:54:56 | INFO | P2 | DataFrame with Z scores and original:
+shape: (0, 4)
+┌───────────┬────────┬─────────────┬──────────┐
+│ pageviews ┆ visits ┆ z_pageviews ┆ z_visits │
+│ ---       ┆ ---    ┆ ---         ┆ ---      │
+│ f64       ┆ f64    ┆ f64         ┆ f64      │
+╞═══════════╪════════╪═════════════╪══════════╡
+└───────────┴────────┴─────────────┴──────────┘
+2026-03-19 11:54:56 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 11:55:52 | INFO | P2 | === RUN START ===
+2026-03-19 11:55:52 | INFO | P2 | project=CINTEL
+2026-03-19 11:55:52 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 11:55:52 | INFO | P2 | python=3.14.0
+2026-03-19 11:55:52 | INFO | P2 | os=Windows 11
+2026-03-19 11:55:52 | INFO | P2 | shell=powershell
+2026-03-19 11:55:52 | INFO | P2 | cwd=.
+2026-03-19 11:55:52 | INFO | P2 | github_actions=False
+2026-03-19 11:55:52 | INFO | P2 | ========================
+2026-03-19 11:55:52 | INFO | P2 | START main()
+2026-03-19 11:55:52 | INFO | P2 | ========================
+2026-03-19 11:55:52 | INFO | P2 | ROOT_DIR = .
+2026-03-19 11:55:52 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 11:55:52 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 11:55:52 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 11:55:52 | INFO | P2 | Loaded Adobe Data
+2026-03-19 11:55:52 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 11:55:52 | INFO | P2 | DataFrame after casting to Int16:
+shape: (314, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ i16       ┆ i16    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ …         ┆ …      │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 11:55:52 | INFO | P2 | Remaining records after dropping nulls: 0
+2026-03-19 11:55:52 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 11:55:52 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 11:55:52 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f64       ┆ f64    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 11:55:52 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 11:55:52 | INFO | P2 | DataFrame with Z scores and original:
+shape: (0, 4)
+┌───────────┬────────┬─────────────┬──────────┐
+│ pageviews ┆ visits ┆ z_pageviews ┆ z_visits │
+│ ---       ┆ ---    ┆ ---         ┆ ---      │
+│ i16       ┆ i16    ┆ f64         ┆ f64      │
+╞═══════════╪════════╪═════════════╪══════════╡
+└───────────┴────────┴─────────────┴──────────┘
+2026-03-19 11:55:52 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 12:02:25 | INFO | P2 | === RUN START ===
+2026-03-19 12:02:25 | INFO | P2 | project=CINTEL
+2026-03-19 12:02:25 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:02:25 | INFO | P2 | python=3.14.0
+2026-03-19 12:02:25 | INFO | P2 | os=Windows 11
+2026-03-19 12:02:25 | INFO | P2 | shell=powershell
+2026-03-19 12:02:25 | INFO | P2 | cwd=.
+2026-03-19 12:02:25 | INFO | P2 | github_actions=False
+2026-03-19 12:02:25 | INFO | P2 | ========================
+2026-03-19 12:02:25 | INFO | P2 | START main()
+2026-03-19 12:02:25 | INFO | P2 | ========================
+2026-03-19 12:02:25 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:02:25 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:02:25 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:02:25 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:02:25 | INFO | P2 | Loaded Adobe Data
+2026-03-19 12:02:25 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 12:02:25 | INFO | P2 | DataFrame after casting to Int16:
+shape: (314, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ i16       ┆ i16    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ …         ┆ …      │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 12:02:25 | INFO | P2 | Remaining records after dropping nulls: 0
+2026-03-19 12:02:25 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 12:02:25 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 12:02:25 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f64       ┆ f64    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 12:02:25 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 12:02:25 | INFO | P2 | DataFrame with Z scores and original:
+shape: (0, 4)
+┌───────────┬────────┬─────────────┬──────────┐
+│ pageviews ┆ visits ┆ z_pageviews ┆ z_visits │
+│ ---       ┆ ---    ┆ ---         ┆ ---      │
+│ i16       ┆ i16    ┆ f64         ┆ f64      │
+╞═══════════╪════════╪═════════════╪══════════╡
+└───────────┴────────┴─────────────┴──────────┘
+2026-03-19 12:02:25 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 12:03:28 | INFO | P2 | === RUN START ===
+2026-03-19 12:03:28 | INFO | P2 | project=CINTEL
+2026-03-19 12:03:28 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:03:28 | INFO | P2 | python=3.14.0
+2026-03-19 12:03:28 | INFO | P2 | os=Windows 11
+2026-03-19 12:03:28 | INFO | P2 | shell=powershell
+2026-03-19 12:03:28 | INFO | P2 | cwd=.
+2026-03-19 12:03:28 | INFO | P2 | github_actions=False
+2026-03-19 12:03:28 | INFO | P2 | ========================
+2026-03-19 12:03:28 | INFO | P2 | START main()
+2026-03-19 12:03:28 | INFO | P2 | ========================
+2026-03-19 12:03:28 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:03:28 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:03:28 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:03:28 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:03:28 | INFO | P2 | Loaded Adobe Data
+2026-03-19 12:03:28 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 12:03:28 | INFO | P2 | DataFrame before casting to Int16:
+shape: (314, 2)
+┌────────────┬────────────┐
+│ pageviews  ┆ visits     │
+│ ---        ┆ ---        │
+│ str        ┆ i64        │
+╞════════════╪════════════╡
+│ 19,245,070 ┆ null       │
+│ 19,683,529 ┆ null       │
+│ 20,107,897 ┆ null       │
+│ 20,486,974 ┆ null       │
+│ 22,145,211 ┆ null       │
+│ …          ┆ …          │
+│ 14,986,572 ┆ 12,150,365 │
+│ 16,332,546 ┆ 13,659,849 │
+│ 16,537,746 ┆ 13,463,788 │
+│ 15,306,279 ┆ 12,709,502 │
+│ 14,090,364 ┆ 11,423,767 │
+└────────────┴────────────┘
+2026-03-19 12:04:09 | INFO | P2 | === RUN START ===
+2026-03-19 12:04:09 | INFO | P2 | project=CINTEL
+2026-03-19 12:04:09 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:04:09 | INFO | P2 | python=3.14.0
+2026-03-19 12:04:09 | INFO | P2 | os=Windows 11
+2026-03-19 12:04:09 | INFO | P2 | shell=powershell
+2026-03-19 12:04:09 | INFO | P2 | cwd=.
+2026-03-19 12:04:09 | INFO | P2 | github_actions=False
+2026-03-19 12:04:09 | INFO | P2 | ========================
+2026-03-19 12:04:09 | INFO | P2 | START main()
+2026-03-19 12:04:09 | INFO | P2 | ========================
+2026-03-19 12:04:09 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:04:09 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:04:09 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:04:09 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:04:09 | INFO | P2 | Loaded Adobe Data
+2026-03-19 12:04:09 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 12:04:09 | INFO | P2 | DataFrame before casting to Int16:
+shape: (314, 2)
+┌────────────┬────────────┐
+│ pageviews  ┆ visits     │
+│ ---        ┆ ---        │
+│ str        ┆ i64        │
+╞════════════╪════════════╡
+│ 19,245,070 ┆ null       │
+│ 19,683,529 ┆ null       │
+│ 20,107,897 ┆ null       │
+│ 20,486,974 ┆ null       │
+│ 22,145,211 ┆ null       │
+│ …          ┆ …          │
+│ 14,986,572 ┆ 12,150,365 │
+│ 16,332,546 ┆ 13,659,849 │
+│ 16,537,746 ┆ 13,463,788 │
+│ 15,306,279 ┆ 12,709,502 │
+│ 14,090,364 ┆ 11,423,767 │
+└────────────┴────────────┘
+2026-03-19 12:04:09 | INFO | P2 | DataFrame after casting to Int16:
+shape: (314, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f16       ┆ f16    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ null      ┆ null   │
+│ …         ┆ …      │
+│ null      ┆ inf    │
+│ null      ┆ inf    │
+│ null      ┆ inf    │
+│ null      ┆ inf    │
+│ null      ┆ inf    │
+└───────────┴────────┘
+2026-03-19 12:04:09 | INFO | P2 | DataFrame after dropping nulls:
+shape: (0, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f16       ┆ f16    │
+╞═══════════╪════════╡
+└───────────┴────────┘
+2026-03-19 12:04:09 | INFO | P2 | Remaining records after dropping nulls: 0
+2026-03-19 12:04:09 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 12:04:09 | INFO | P2 | Calculating average values for pageviews and visits
+2026-03-19 12:04:09 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ f16       ┆ f16    │
+╞═══════════╪════════╡
+│ null      ┆ null   │
+└───────────┴────────┘
+2026-03-19 12:04:09 | INFO | P2 | Calculating Z scores for pageviews and visits
+2026-03-19 12:04:09 | INFO | P2 | DataFrame with Z scores and original:
+shape: (0, 4)
+┌───────────┬────────┬─────────────┬──────────┐
+│ pageviews ┆ visits ┆ z_pageviews ┆ z_visits │
+│ ---       ┆ ---    ┆ ---         ┆ ---      │
+│ f16       ┆ f16    ┆ f16         ┆ f16      │
+╞═══════════╪════════╪═════════════╪══════════╡
+└───────────┴────────┴─────────────┴──────────┘
+2026-03-19 12:04:09 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 12:08:34 | INFO | P2 | === RUN START ===
+2026-03-19 12:08:34 | INFO | P2 | project=CINTEL
+2026-03-19 12:08:34 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:08:34 | INFO | P2 | python=3.14.0
+2026-03-19 12:08:34 | INFO | P2 | os=Windows 11
+2026-03-19 12:08:34 | INFO | P2 | shell=powershell
+2026-03-19 12:08:34 | INFO | P2 | cwd=.
+2026-03-19 12:08:34 | INFO | P2 | github_actions=False
+2026-03-19 12:08:34 | INFO | P2 | ========================
+2026-03-19 12:08:34 | INFO | P2 | START main()
+2026-03-19 12:08:34 | INFO | P2 | ========================
+2026-03-19 12:08:34 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:08:34 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:08:34 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:08:34 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:08:34 | INFO | P2 | Loaded Adobe Data
+2026-03-19 12:08:34 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 12:08:34 | INFO | P2 | DataFrame before casting to Int16:
+shape: (314, 2)
+┌────────────┬────────────┐
+│ pageviews  ┆ visits     │
+│ ---        ┆ ---        │
+│ str        ┆ i64        │
+╞════════════╪════════════╡
+│ 19,245,070 ┆ null       │
+│ 19,683,529 ┆ null       │
+│ 20,107,897 ┆ null       │
+│ 20,486,974 ┆ null       │
+│ 22,145,211 ┆ null       │
+│ …          ┆ …          │
+│ 14,986,572 ┆ 12,150,365 │
+│ 16,332,546 ┆ 13,659,849 │
+│ 16,537,746 ┆ 13,463,788 │
+│ 15,306,279 ┆ 12,709,502 │
+│ 14,090,364 ┆ 11,423,767 │
+└────────────┴────────────┘
+2026-03-19 12:10:05 | INFO | P2 | === RUN START ===
+2026-03-19 12:10:05 | INFO | P2 | project=CINTEL
+2026-03-19 12:10:05 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:10:05 | INFO | P2 | python=3.14.0
+2026-03-19 12:10:05 | INFO | P2 | os=Windows 11
+2026-03-19 12:10:05 | INFO | P2 | shell=powershell
+2026-03-19 12:10:05 | INFO | P2 | cwd=.
+2026-03-19 12:10:05 | INFO | P2 | github_actions=False
+2026-03-19 12:10:05 | INFO | P2 | ========================
+2026-03-19 12:10:05 | INFO | P2 | START main()
+2026-03-19 12:10:05 | INFO | P2 | ========================
+2026-03-19 12:10:05 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:10:05 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:10:05 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:10:05 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:10:05 | INFO | P2 | Loaded Adobe Data
+2026-03-19 12:10:05 | INFO | P2 | Dropping
+shape: (1, 2)
+┌───────────┬────────┐
+│ pageviews ┆ visits │
+│ ---       ┆ ---    │
+│ u64       ┆ u64    │
+╞═══════════╪════════╡
+│ 0         ┆ 53     │
+└───────────┴────────┘ null values from the DataFrame
+2026-03-19 12:10:05 | INFO | P2 | DataFrame before casting to Int16:
+shape: (314, 2)
+┌────────────┬────────────┐
+│ pageviews  ┆ visits     │
+│ ---        ┆ ---        │
+│ str        ┆ i64        │
+╞════════════╪════════════╡
+│ 19,245,070 ┆ null       │
+│ 19,683,529 ┆ null       │
+│ 20,107,897 ┆ null       │
+│ 20,486,974 ┆ null       │
+│ 22,145,211 ┆ null       │
+│ …          ┆ …          │
+│ 14,986,572 ┆ 12,150,365 │
+│ 16,332,546 ┆ 13,659,849 │
+│ 16,537,746 ┆ 13,463,788 │
+│ 15,306,279 ┆ 12,709,502 │
+│ 14,090,364 ┆ 11,423,767 │
+└────────────┴────────────┘
+2026-03-19 12:13:34 | INFO | P2 | === RUN START ===
+2026-03-19 12:13:34 | INFO | P2 | project=CINTEL
+2026-03-19 12:13:34 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:13:34 | INFO | P2 | python=3.14.0
+2026-03-19 12:13:34 | INFO | P2 | os=Windows 11
+2026-03-19 12:13:34 | INFO | P2 | shell=powershell
+2026-03-19 12:13:34 | INFO | P2 | cwd=.
+2026-03-19 12:13:34 | INFO | P2 | github_actions=False
+2026-03-19 12:13:34 | INFO | P2 | ========================
+2026-03-19 12:13:34 | INFO | P2 | START main()
+2026-03-19 12:13:34 | INFO | P2 | ========================
+2026-03-19 12:13:34 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:13:34 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:13:34 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:13:34 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:14:05 | INFO | P2 | === RUN START ===
+2026-03-19 12:14:05 | INFO | P2 | project=CINTEL
+2026-03-19 12:14:05 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:14:05 | INFO | P2 | python=3.14.0
+2026-03-19 12:14:05 | INFO | P2 | os=Windows 11
+2026-03-19 12:14:05 | INFO | P2 | shell=powershell
+2026-03-19 12:14:05 | INFO | P2 | cwd=.
+2026-03-19 12:14:05 | INFO | P2 | github_actions=False
+2026-03-19 12:14:05 | INFO | P2 | ========================
+2026-03-19 12:14:05 | INFO | P2 | START main()
+2026-03-19 12:14:05 | INFO | P2 | ========================
+2026-03-19 12:14:05 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:14:05 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:14:05 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:14:05 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:15:55 | INFO | P2 | === RUN START ===
+2026-03-19 12:15:55 | INFO | P2 | project=CINTEL
+2026-03-19 12:15:55 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:15:55 | INFO | P2 | python=3.14.0
+2026-03-19 12:15:55 | INFO | P2 | os=Windows 11
+2026-03-19 12:15:55 | INFO | P2 | shell=powershell
+2026-03-19 12:15:55 | INFO | P2 | cwd=.
+2026-03-19 12:15:55 | INFO | P2 | github_actions=False
+2026-03-19 12:15:55 | INFO | P2 | ========================
+2026-03-19 12:15:55 | INFO | P2 | START main()
+2026-03-19 12:15:55 | INFO | P2 | ========================
+2026-03-19 12:15:55 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:15:55 | INFO | P2 | DATA_FILE = data\adobe_data.csv
+2026-03-19 12:15:55 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex_adobe.csv
+2026-03-19 12:15:55 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:31:58 | INFO | P2 | === RUN START ===
+2026-03-19 12:31:58 | INFO | P2 | project=CINTEL
+2026-03-19 12:31:58 | INFO | P2 | repo_dir=cintel-02-static-anomalies
+2026-03-19 12:31:58 | INFO | P2 | python=3.14.0
+2026-03-19 12:31:58 | INFO | P2 | os=Windows 11
+2026-03-19 12:31:58 | INFO | P2 | shell=powershell
+2026-03-19 12:31:58 | INFO | P2 | cwd=.
+2026-03-19 12:31:58 | INFO | P2 | github_actions=False
+2026-03-19 12:31:58 | INFO | P2 | ========================
+2026-03-19 12:31:58 | INFO | P2 | START main()
+2026-03-19 12:31:58 | INFO | P2 | ========================
+2026-03-19 12:31:58 | INFO | P2 | ROOT_DIR = .
+2026-03-19 12:31:58 | INFO | P2 | DATA_FILE = data\clinic_data_alex.csv
+2026-03-19 12:31:58 | INFO | P2 | OUTPUT_FILE = artifacts\anomalies_alex.csv
+2026-03-19 12:31:58 | INFO | P2 | ARTIFACTS_DIR = artifacts
+2026-03-19 12:31:58 | INFO | P2 | Loaded 24 patient records
+2026-03-19 12:31:58 | INFO | P2 | Assessing Meaningful Thresholds for Anomaly Detection
+2026-03-19 12:31:58 | INFO | P2 | Calculating average values for age_years and height_inches
+2026-03-19 12:31:58 | INFO | P2 | Average values:
+shape: (1, 2)
+┌───────────────┬───────────────────┐
+│ avg_age_years ┆ avg_height_inches │
+│ ---           ┆ ---               │
+│ f64           ┆ f64               │
+╞═══════════════╪═══════════════════╡
+│ 61.25         ┆ 66.791667         │
+└───────────────┴───────────────────┘
+2026-03-19 12:31:58 | INFO | P2 | Calculating Z scores for age_years and height_inches
+2026-03-19 12:31:58 | INFO | P2 | DataFrame with Z scores and original:
+shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-19 12:31:58 | INFO | P2 | Creating scatter plot of age_years vs height_inches
+2026-03-19 12:31:59 | INFO | P2 | Scatter plot created. Please inspect the plot to identify any obvious outliers
+2026-03-19 12:31:59 | INFO | P2 | df: shape: (24, 4)
+┌───────────┬───────────────┬─────────────┬─────────────────┐
+│ age_years ┆ height_inches ┆ z_age_years ┆ z_height_inches │
+│ ---       ┆ ---           ┆ ---         ┆ ---             │
+│ i64       ┆ i64           ┆ f64         ┆ f64             │
+╞═══════════╪═══════════════╪═════════════╪═════════════════╡
+│ 21        ┆ 64            ┆ -1.543196   ┆ -0.794511       │
+│ 25        ┆ 68            ┆ -1.389835   ┆ 0.343893        │
+│ 29        ┆ 70            ┆ -1.236474   ┆ 0.913095        │
+│ 32        ┆ 66            ┆ -1.121453   ┆ -0.225309       │
+│ 35        ┆ 72            ┆ -1.006432   ┆ 1.482298        │
+│ …         ┆ …             ┆ …           ┆ …               │
+│ 87        ┆ 62            ┆ 0.987262    ┆ -1.363714       │
+│ 91        ┆ 64            ┆ 1.140623    ┆ -0.794511       │
+│ 96        ┆ 61            ┆ 1.332325    ┆ -1.648315       │
+│ 102       ┆ 60            ┆ 1.562367    ┆ -1.932916       │
+│ 118       ┆ 67            ┆ 2.175811    ┆ 0.059292        │
+└───────────┴───────────────┴─────────────┴─────────────────┘
+2026-03-19 12:31:59 | INFO | P2 | MAX_REASONABLE_Z_VALUE: 2.0
+2026-03-19 12:31:59 | INFO | P2 | Count of anomalies found: 1
+2026-03-19 12:31:59 | INFO | P2 | Wrote anomalies file: C:\Repos\cintel-02-static-anomalies\artifacts\anomalies_alex.csv
+2026-03-19 12:31:59 | INFO | P2 | ========================
+2026-03-19 12:31:59 | INFO | P2 | Pipeline executed successfully!
+2026-03-19 12:31:59 | INFO | P2 | ========================
+2026-03-19 12:31:59 | INFO | P2 | END main()
